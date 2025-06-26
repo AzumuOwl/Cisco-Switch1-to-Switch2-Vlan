@@ -1,0 +1,28 @@
+en
+conf t
+สร้าง Subinterface สำหรับแต่ละ VLAN
+interface g0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+
+interface g0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+
+เปิด DHCP สำหรับ VLAN10
+ip dhcp pool VLAN10
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 8.8.8.8
+ lease 7
+
+เปิด DHCP สำหรับ VLAN20
+ip dhcp pool VLAN20
+ network 192.168.20.0 255.255.255.0
+ default-router 192.168.20.1
+ dns-server 8.8.8.8
+ lease 7
+
+ยกเว้น IP บางช่วงไม่ให้แจก เช่น Gateway
+ip dhcp excluded-address 192.168.10.1 192.168.10.99
+ip dhcp excluded-address 192.168.20.1 192.168.20.99
