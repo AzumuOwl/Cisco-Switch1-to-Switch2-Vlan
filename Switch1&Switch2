@@ -1,0 +1,19 @@
+en
+conf t
+
+interface f0/1
+switchport mode trunk
+switchport nonegotiate
+switchport trunk allowed vlan 2-3
+
+interface f0/2
+switchport mode access
+switchport access Vlan 2
+
+interface f0/3
+switchport mode access
+switchport access Vlan 3
+
+interface fa0/24
+switchport mode trunk
+switchport trunk allowed vlan 2-3
