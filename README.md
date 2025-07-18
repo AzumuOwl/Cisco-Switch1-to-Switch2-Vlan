@@ -1,4 +1,4 @@
-# Switch1-to-Switch2-Vlan
+# Cisco-Switch1-to-Switch2-Vlan
 
 ## ✅ คืออะไร?
 - คือการ กำหนด VLAN (Virtual LAN) สองกลุ่ม (VLAN10, VLAN20) บนสวิตช์ และกำหนดพอร์ต Trunk กับ Access เพื่อให้แต่ละพอร์ตทำงานใน VLAN ที่ต้องการ และเชื่อมต่อระหว่าง Switch1 กับ Switch2 ผ่านพอร์ต Trunk (f0/1, fa0/24)
